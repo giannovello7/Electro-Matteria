@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Matteria - Información de Contacto</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        #qrcode {
+            margin: 20px auto;
+        }
+        .contact-info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Electro Matteria</h1>
+    <p>Materiales Eléctricos para Construcción y Hogares</p>
+    
+    <div id="qrcode"></div>
+    
+    <div class="contact-info">
+        <h2>Información de Contacto</h2>
+        <p>📍 Dirección: Av. Siria 1625, San Miguel de Tucumán, Tucumán</p>
+        <p>📞 Teléfono: 3814457166</p>
+        <p>📧 Email: inggnovello@gmail.com</p>
+        <p>📸 Instagram: <a href="https://www.instagram.com/electro_matteria">@electro_matteria</a></p>
+    </div>
+
+    <script>
+        var qrcode = qrcode(0, 'M');
+        qrcode.addData(window.location.href);
+        qrcode.make();
+        document.getElementById('qrcode').innerHTML = qrcode.createImgTag(5);
+    </script>
+</body>
+</html>
